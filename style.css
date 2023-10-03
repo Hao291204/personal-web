@@ -1,0 +1,176 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #E9EBE8;
+}
+.header{
+    margin: 0px 50px;
+    border-bottom: 1px solid black;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+button {
+  margin-bottom: 10px;
+  border: 2px solid #000;
+  border-radius: 30px;
+  background: transparent;
+  color: rgb(169, 20, 20);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #000000;
+  color:white;
+}
+
+.symbol{
+    display:flex;
+    flex-direction: row;
+    column-gap: 30px;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+.content{
+    margin:30px 0px 0px 50px;
+    display:flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+.img{
+    height: 550px;
+    width: 650px;
+    object-fit: cover;
+    opacity:0.9;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.custom-btn {
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 6px;
+    margin-left: 200px;
+    padding: 10px 25px;
+    font-weight: 700;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  .btn-2 {
+    border: 2px solid #000;
+    border-radius: 30px;
+  }
+  .custom-btn:hover{
+    background-color: black;
+    color:white;
+  }
+  .btn-2:active{
+    top:2px;
+  }
+  .footer{
+    margin: 50px 50px;
+    border-top: 2px solid black;
+    height: 300px;
+    display:flex;
+    flex-direction: row;
+    transition: 0.5s ease;
+  }
+  .zalo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid black;
+    height: 350px;
+    width: 700px;
+  }
+  .zalo-img{
+    margin-right: 50px;
+    height: 300px;
+    width: 300px;
+  }
+  .personal{
+    margin-left: 30px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .phone{
+    display:flex;
+    flex-direction: row;
+    column-gap: 10px;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+    font-size: 25px;
+    font-family: 'Russo One', sans-serif;
+    margin-left: 130px;
+  }
+  .phone::after{
+    content:"0775586522";
+    opacity: 0;
+  }
+  .phone:hover::after{
+    opacity: 1;
+    color: black;
+    text-decoration: underline;
+  }
+  .phone:hover{
+    color:red;
+  }
+ .contact{
+  transition: 0.1s ease-in;
+  color:black;
+ }
+ .contact:hover {
+  color:red;
+ }
+ .contact:active{
+  opacity: 0.5;
+ }
+ #content {
+  color: rgb(40, 182, 229);
+  text-align: justify;
+  background-color: rgb(26, 173, 222);
+  font-size: 20px;
+  color: black;
+  text-align: justify;
+  text-shadow: none;
+  font-family: Raleway;
+  margin-top: 2em;
+}
+.question{
+  font-weight: bold;
+  font-size: 30px;    
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  font-size: 23px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+#submit{
+  font-size: 20px;
+  background-color: #6b2380;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 0;
+  width: 100%;
+}
+#submit:hover{
+  background-color: #ae00b7;
+}
+#textbox4 {
+  width: 100%;
+}

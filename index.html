@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/phone.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <title>Trang cá nhân </title>
+    <link  rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header"> 
+        <div class="letter" style="margin-bottom: 7px;font-family: 'Roboto Slab', serif;font-size: 40px;">PORTFOLIO</div>
+       
+        <div class="symbol">
+            <button onclick="changeBackgroundColor()">Change Color</button>
+            <i class="gg-instagram"></i>
+            <i class="gg-facebook"></i>
+            <i class="gg-phone"></i>
+        </div>
+    </div>
+    <div class="content">
+        <img src="cavat.jpg" class="img">
+        <div style=" margin: auto;">
+            <div style="font-size: 80px;font-weight: 600; word-spacing: 0px;font-family: 'Play', sans-serif;">TRẦN GIA HẠO</div>
+            <div style="color:black; font-family: 'Ubuntu', sans-serif;opacity:0.7; margin-top: 10px;word-spacing: 10px; word-break: keep-all;width: 530px;font-size: 18px;margin-left:20px;">
+            I am 18 years old. Currently, I am a student at Broward Vietnam and I am pursuing a major in Information Technology. When I enrolled in school, I successfully got a 50% scholarship throughout my study career in Broward Vietnam. In addition, I also participate in activities at school. Typically, I am one of the first-generation members of the Open Arms Club and am currently a member of the Mentoring Club as a mentor and content creator. After the first year of studying and experiencing at school, on September 9, 2023, I was awarded a certificate as one of the active students in the 2022 school year. My dream is to become an international developer.</div>
+            <pre style="font-size: 30px;"><b><i>"I believe that no matters where we start,
+the posibilty of our successions depends
+on our patience and perseverance."</i></b></pre>
+
+            <a href="#person"><button class="custom-btn btn-2" >CONTACT ME</button></a>
+        </div>
+    </div>
+    <div class="footer" id="person">
+        <div class="zalo"><img src="Zalo.jpg" class="zalo-img"> </div>
+        <div class="personal">
+            <div style="padding-bottom:20px ;margin-top: 20px ;font-family: 'Russo One', sans-serif;font-size: 20px; opacity: 0.7;">FOLLOW ME</div>
+            <div style=" font-size: 25px;font-family: 'Russo One', sans-serif; text-decoration: underline; margin-left: 20px">
+                <div><a class="contact" href="https://www.facebook.com/hao.tran.2912" target="_blank">FACEBOOK &#8599</a></div>
+                <div style="margin-top:10px;"><a class="contact" href="https://www.instagram.com/hao.tran.545/" target="_blank">INSTAGRAM &#8599</a></div>
+                <div style="margin-top:10px; padding-bottom:20px"><a class="contact" href="https://www.tiktok.com/@hao...tran" target="_blank">TIKTOK &#8599</a></div>
+            </div>
+           <div onclick="callPhoneNumber()"> <div class="phone" ><i class="gg-phone" style="margin-top:3px;" ></i> </div></div>
+        </div>
+    </div>
+
+    <div id="content" style="display: none;">
+        <div id="quiz"> </div>
+        <button id="submit">Get Results</button>
+        <div id="results"> </div>       
+    </div>
+   <a  href="#content"> <button id="textbox4" onclick="showQuiz('textbox4','content')">
+      <h2>Click to show quiz about me!</h2>
+    </button></a>
+    </div>
+    
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling effect
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        function changeBackgroundColor() {
+        var body = document.querySelector('body');
+        body.style.backgroundColor = getRandomColor();
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    function callPhoneNumber() {
+        var phoneNumber = "0775586522";
+        window.location.href = "tel:" + phoneNumber;
+    }
+
+
+
+
+    function showQuiz(button, content) {
+    var x = document.getElementById(content);
+    var y = document.getElementById(button);
+    if (x.style.display == "none") {
+    x.style.display = "block";
+    y.innerHTML = '<h2>Click here to hide quiz!</h2>'
+    } else {
+    x.style.display = "none";
+    y.innerHTML = '<h2>Click here to show quiz!</h2>'
+    }    
+}
+var quiz = document.getElementById('quiz');
+var results = document.getElementById('results');
+var submit = document.getElementById('submit');
+var questions = [
+    {
+        question: "Where do I come from?",
+        answers: {
+            a: 'Ho Chi Minh City',
+            b: 'Da Nang',
+            c: 'Ha Noi',
+            d: 'Soc Trang Province'
+        },
+        correctAnswer: 'd'
+    },
+    {
+        question: "Which major am I pursuing?",
+        answers: {
+            a: 'IT',
+            b: 'Business Administration',
+            c: 'Hospitality & Tourism Mângement',
+            d: 'The son of my mom'
+        },
+        correctAnswer: 'a'
+    },
+    {
+        question: "Which country do I want to settle?",
+        answers: {
+            a: 'Viet Nam',
+            b: 'Singapore',
+            c: 'The USA',
+            d: 'Canada'
+        },
+        correctAnswer: 'c'
+    },
+    {  
+        question: "What is the most important thing for me?",
+        answers: {
+            a: 'Money',
+            b: 'Friend',
+            c: 'Family',
+            d: 'Lover'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "What is my DoB?",
+        answers: {
+            a: '24/12/2004',
+            b: '29/12/2004',
+            c: '19/12/2004',
+            d: '19/02/2004'
+        },
+        correctAnswer: 'b'
+    }
+];
+createQuiz(questions, quiz, results, submit);
+
+
+function createQuiz(questions, quiz, results, submit){
+	function showQuestions(questions, quiz){   
+        var output = [];
+        var answer;
+    
+        for(var i=0; i<questions.length; i++){
+            
+            answer = [];
+    
+            for(letter in questions[i].answers){
+    
+                answer.push(
+                    '<label>' +
+                    '<input type="radio" name="question' + i + '" value="' + letter + '">' + questions[i].answers[letter]
+                    + '</label> <br>'
+                );
+            }
+    
+            output.push(
+                '<div class="question">' + questions[i].question + '</div>'
+                + '<div class="answers">' + answer.join('') + '</div>'
+            );
+        }
+    
+        quiz.innerHTML = output.join('');   
+    }
+
+	function showResults(questions, quiz, results){
+        var answerContainers = quiz.querySelectorAll('.answers');
+	
+        var userAnswer = '';
+        var numCorrect = 0;
+        
+        for(var i = 0; i < questions.length; i++){
+    
+            userAnswer = (answerContainers[i].querySelector('input[name=question' + i + ']:checked')||{}).value;
+            
+            if(userAnswer===questions[i].correctAnswer){
+                numCorrect++;
+                
+                answerContainers[i].style.color = 'green';
+            }
+            else{
+                answerContainers[i].style.color = 'red';
+            }
+        }
+           
+        switch (numCorrect) {
+            case 0:
+            results.innerHTML = numCorrect + ' out of ' + questions.length + '</br>I am disappointed:(((';
+            break;
+            case 1:
+            results.innerHTML = numCorrect + ' out of ' + questions.length + '</br>A little sad:(';
+            break;
+            case 2:
+            results.innerHTML = numCorrect + ' out of ' + questions.length + '</br>OK:D';
+            break;
+            case 3:
+            results.innerHTML = numCorrect + ' out of ' + questions.length + '</br> You did well!';
+            break;
+            case 4:
+            results.innerHTML = numCorrect + ' out of ' + questions.length + '</br> Amazing!!';
+            break;
+            case 5:
+            results.innerHTML = numCorrect + ' out of ' + questions.length + '</br> My Love <3';
+            break;
+            default:
+            break;
+        }
+    }
+
+	showQuestions(questions, quiz);
+	submit.onclick = function(){
+		showResults(questions, quiz, results);
+	}
+}
+
+  
+
+
+
+    </script>
+    
+</body>
+</html>
